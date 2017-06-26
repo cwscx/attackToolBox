@@ -10,7 +10,8 @@ setup(name="KNN-attackToolBox",
 	  classifiers=[
 	  	"License :: OSI Approved :: MIT License",
 	  	"Operating System :: Microsoft :: Windows :: Windows 10",
-	  	"Programming Language :: Python :: 3.5"
+	  	"Programming Language :: Python :: 3.5",
+	  	"Topic :: Multimedia :: Graphics :: Graphics Conversion"
 	  ],
 	  url="https://github.com/cwscx/attackToolBox",
 	  author="Shengyang Shi",
