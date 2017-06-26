@@ -1,4 +1,2 @@
-*
-!*.py
-!.gitignore
-!README.md
+*.pyc
+/*.egg-info
