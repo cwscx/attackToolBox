@@ -24,4 +24,6 @@ setup(name="KNN-attackToolBox",
 	  	"scikit-learn",
 	  	"matplotlib"
 	  ],
+	  test_suite="nose.collector",
+	  tests_require=["nose"],
 	  zip_safe=False)

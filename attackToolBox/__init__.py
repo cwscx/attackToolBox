@@ -1,2 +1,2 @@
 def nimabi():
-	print("mmp")
+	return "mmp"
