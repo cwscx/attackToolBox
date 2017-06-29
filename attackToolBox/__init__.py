@@ -194,3 +194,15 @@ class attackToolBox():
 		else:
 			showImage(self.polluted_test_inputs[:size], self.test_labels[:size])
 
+	def showNorm(self):
+		norm_sum = 0.0
+		norm_num = 0.0
+
+		for i in range(len(self.original_test_inputs)):
+			o_input = self.original_test_inputs[i]
+			p_input = self.polluted_test_inputs[i]
+
+			norm_sum += np.linalg.norm(o_input - p_input)
+			norm_num += 1.0
+
+		print(norm_sum / norm_num)
