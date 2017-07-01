@@ -160,6 +160,15 @@ class attackToolBox():
 			if (i * 100 / len(inputs)) % 1 == 0:
 				print((i * 100 / len(inputs)), "%...")
 
+	def setPollutedTestImages(self, polluted_test_inputs):
+		self.polluted_test_inputs = polluted_test_inputs
+
+	def setOriginalTestImages(self, original_test_inputs):
+		self.original_test_inputs = original_test_inputs
+
+	def setTestLabels(self, test_labels):
+		self.test_labels = test_labels
+
 	def testKNN(self):
 		print(self.model.score(self.original_test_inputs, self.test_labels))
 		print(self.model.score(self.polluted_test_inputs, self.test_labels))
