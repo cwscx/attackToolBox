@@ -1,29 +1,12 @@
 import copy, math, pickle, sys
 import numpy as np
 import tensorflow as tf
-import matplotlib.pyplot as plt
 
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import preprocessing
 
-def showImage(inputs, labels):
-	side = len(inputs[0]) ** 0.5
-	if side % 1 == 0:
-		side = int(side)
-		for i in range(len(inputs)):
-			p_image = inputs[i].reshape(side, side)		
-			
-			print(labels[i])
-			plt.imshow(p_image, cmap="gray", vmin=0, vmax=1.0)
-			plt.show()
-
-def rescale(x):
-	for i in range(len(x)):
-		if x[i] < 0:
-			x[i] = 0
-	maximum = np.amax(x)
-	x = x / maximum
-	return x
+# from . import atbHelper
+from .atbHelper import *
 
 class attackToolBox():
 	
@@ -126,7 +109,7 @@ class attackToolBox():
 			correct_label = sess.run(correct, feed_dict={y_: label.reshape(1, label_d)})[0]
 
 			prob_of_correct_label = sess.run(y, feed_dict={x: image.reshape(1, input_d)})[0][correct_label]
-
+			
 			j = 0
 			while predicted_label == correct_label and j < threshold:
 				j += 1
